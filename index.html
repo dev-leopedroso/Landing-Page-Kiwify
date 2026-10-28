@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diálogo a Dois: caderno prático de comunicação para casais</title>
+<meta name="description" content="Caderno prático em PDF com exercícios, roteiros e ferramentas para conversar com mais clareza e respeito no relacionamento. Material educativo, R$ 19,90.">
+<meta name="theme-color" content="#F7F0E4">
+<meta property="og:title" content="Diálogo a Dois: caderno prático de comunicação para casais">
+<meta property="og:description" content="Exercícios, roteiros e ferramentas para conversas mais claras e respeitosas. PDF com acesso imediato.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='24' cy='32' r='18' fill='%23A94B2B'/%3E%3Ccircle cx='42' cy='32' r='18' fill='%233A2A21' fill-opacity='.85'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#F7F0E4;
+  --areia:#EBDDC8;
+  --papel:#FFFBF3;
+  --marrom:#3A2A21;
+  --marrom-suave:#6B5748;
+  --terracota:#A94B2B;
+  --terracota-escuro:#8A3A1F;
+  --linha:#D9C6AB;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--creme);color:var(--marrom);
+  font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
+}
+img,svg{max-width:100%}
+a{color:var(--terracota-escuro)}
+:focus-visible{outline:3px solid var(--terracota);outline-offset:3px;border-radius:4px}
+
+.miolo{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.texto{max-width:62ch}
+.secao{padding:56px 0}
+.secao-areia{background:var(--areia)}
+
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;margin:0 0 .6em;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,7vw,4.1rem);line-height:1.04}
+h2{font-size:clamp(1.8rem,4.6vw,2.7rem)}
+h3{font-size:1.3rem;line-height:1.25}
+p{margin:0 0 1em}
+
+/* topo */
+.topo{padding:18px 0}
+.topo .miolo{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.marca{font-family:var(--serif);font-size:1.25rem;font-weight:600;text-decoration:none;color:var(--marrom)}
+.topo-link{font-size:.95rem;color:var(--marrom-suave);text-decoration:none;border-bottom:1px solid var(--linha)}
+.topo-link:hover{color:var(--terracota-escuro);border-color:var(--terracota)}
+
+/* botão */
+.botao{
+  display:inline-block;background:var(--terracota);color:#FFF9F0;text-decoration:none;
+  font-weight:600;font-size:1.05rem;padding:15px 28px;border-radius:999px;border:0;cursor:pointer;
+  transition:background .15s ease;
+}
+.botao:hover{background:var(--terracota-escuro)}
+.botao-claro{background:#FFF9F0;color:var(--terracota-escuro)}
+.botao-claro:hover{background:var(--areia)}
+.nota{font-size:.92rem;color:var(--marrom-suave);margin:14px 0 0}
+
+/* hero */
+.hero{padding:28px 0 64px}
+.hero-grade{display:grid;gap:40px}
+.hero p.sub{font-size:1.18rem;color:var(--marrom-suave);max-width:46ch}
+.hero-acao{margin-top:28px}
+
+/* página de caderno */
+.caderno{
+  position:relative;background-color:var(--papel);
+  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 31px,#E7D7BD 31px,#E7D7BD 32px);
+  background-position:0 14px;
+  border:1px solid var(--linha);border-radius:6px;
+  padding:26px 22px 24px 54px;
+  box-shadow:0 1px 0 var(--linha),0 18px 32px -22px rgba(58,42,33,.45);
+}
+.caderno::before{
+  content:"";position:absolute;top:0;bottom:0;left:38px;width:2px;background:rgba(169,75,43,.55);
+}
+.caderno-rotulo{font-size:.9rem;color:var(--marrom-suave);margin:0 0 4px}
+.antes,.depois{font-family:var(--serif);margin:0 0 20px;line-height:32px}
+.antes{font-size:1.25rem;font-style:italic;color:var(--marrom-suave);text-decoration:line-through;text-decoration-color:var(--terracota);text-decoration-thickness:2px}
+.depois{font-size:1.4rem;font-weight:500;line-height:32px}
+.caderno-troca{
+  font:inherit;font-size:.95rem;font-weight:600;color:var(--terracota-escuro);background:none;border:0;
+  border-bottom:2px solid var(--terracota);padding:2px 0;cursor:pointer;
+}
+.caderno-troca:hover{color:var(--marrom)}
+.frase{transition:opacity .2s ease}
+.frase.some{opacity:0}
+
+/* listas de reconhecimento */
+.reconhece{list-style:none;padding:0;margin:28px 0 0;max-width:62ch}
+.reconhece li{padding:16px 0 16px 0;border-top:1px solid var(--linha);font-size:1.08rem}
+.reconhece li:last-child{border-bottom:1px solid var(--linha)}
+
+/* amostra */
+.amostra{display:grid;gap:36px}
+.exemplo{background:var(--papel);border:1px solid var(--linha);border-radius:6px;padding:8px 22px}
+.exemplo dl{margin:0}
+.exemplo .linha{padding:14px 0;border-bottom:1px solid var(--linha)}
+.exemplo .linha:last-child{border-bottom:0}
+.exemplo dt{font-size:.92rem;color:var(--marrom-suave);margin:0 0 2px}
+.exemplo dd{margin:0;font-family:var(--serif);font-size:1.12rem}
+.exemplo .pedido dd{font-weight:500;color:var(--terracota-escuro)}
+
+/* conteúdo */
+.indice{list-style:none;padding:0;margin:28px 0 0}
+.indice li{display:grid;gap:4px;padding:18px 0;border-top:1px solid var(--linha)}
+.indice li:last-child{border-bottom:1px solid var(--linha)}
+.indice .mod{font-family:var(--serif);font-weight:600;color:var(--terracota-escuro)}
+.indice .tit{font-family:var(--serif);font-size:1.25rem;font-weight:500;line-height:1.25}
+.indice .desc{color:var(--marrom-suave);margin:0}
+.bonus-bloco{margin-top:36px}
+.bonus-bloco ul{padding-left:1.1em;margin:0}
+.bonus-bloco li{margin-bottom:.5em}
+
+/* limites */
+.limites{display:grid;gap:36px}
+.limites ul{padding-left:1.1em;margin:0 0 1em}
+.limites li{margin-bottom:.6em}
+.seguranca{border-left:3px solid var(--terracota);padding:4px 0 4px 18px;margin-top:8px}
+
+/* preço */
+.preco{background:var(--marrom);color:#F7F0E4}
+.preco h2{color:#FFF9F0}
+.preco-grade{display:grid;gap:32px}
+.valor{font-family:var(--serif);font-size:clamp(3.6rem,13vw,5.6rem);font-weight:500;line-height:1;margin:6px 0 4px;color:#FFF9F0}
+.valor small{font-size:.38em;font-weight:400;margin-right:.15em}
+.preco ul{padding-left:1.1em;margin:0}
+.preco li{margin-bottom:.5em}
+.preco .nota{color:#D9C6AB}
+
+/* faq */
+.faq{max-width:68ch;margin-top:24px}
+.faq details{border-top:1px solid var(--linha);padding:4px 0}
+.faq details:last-child{border-bottom:1px solid var(--linha)}
+.faq summary{
+  cursor:pointer;list-style:none;font-family:var(--serif);font-size:1.2rem;font-weight:500;
+  padding:14px 36px 14px 0;position:relative;line-height:1.3;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:1.6rem;color:var(--terracota);font-family:var(--sans);font-weight:400}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding-bottom:12px;color:var(--marrom-suave)}
+
+/* rodapé */
+.rodape{padding:40px 0 48px;font-size:.9rem;color:var(--marrom-suave)}
+.rodape p{max-width:70ch}
+
+/* barra fixa mobile */
+.barra{
+  position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:var(--marrom);color:#FFF9F0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  transform:translateY(110%);transition:transform .25s ease;
+}
+.barra.visivel{transform:none}
+.barra span{font-family:var(--serif);font-size:1.25rem}
+.barra .botao{padding:11px 22px;font-size:1rem}
+
+@media (min-width:760px){
+  .miolo{padding:0 32px}
+  .secao{padding:84px 0}
+  .hero{padding:44px 0 92px}
+  .hero-grade{grid-template-columns:1.15fr .85fr;align-items:center;gap:64px}
+  .caderno{transform:rotate(1.2deg);padding:32px 30px 28px 62px}
+  .caderno::before{left:46px}
+  .amostra{grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .indice li{grid-template-columns:110px 1fr;gap:24px}
+  .indice .desc{grid-column:2}
+  .limites{grid-template-columns:1fr 1fr;gap:64px}
+  .preco-grade{grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .barra{display:none}
+}
+@media (max-width:759px){
+  body{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="miolo">
+    <a class="marca" href="#">Diálogo a Dois</a>
+    <a class="topo-link" href="#conteudo">Ver o que tem dentro</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="miolo hero-grade">
+    <div>
+      <h1>Dizer o que você sente sem transformar a conversa em briga.</h1>
+      <p class="sub">Um caderno prático com exercícios, roteiros e ferramentas para expressar o que incomoda, ouvir o outro e combinar próximos passos com mais clareza e respeito.</p>
+      <div class="hero-acao">
+        <a class="botao" id="cta-hero" href="https://pay.kiwify.com.br/EnoPS7s" rel="noopener">Quero o caderno por R$ 19,90</a>
+        <p class="nota">PDF de 16 páginas. Acesso por e-mail logo após a confirmação do pagamento.</p>
+      </div>
+    </div>
+
+    <div class="caderno" aria-label="Exemplo de exercício do caderno">
+      <p class="caderno-rotulo">Em vez de dizer</p>
+      <p class="antes frase" id="antes">“Você nunca me escuta!”</p>
+      <p class="caderno-rotulo">Experimente</p>
+      <p class="depois frase" id="depois" aria-live="polite">“Quero terminar de explicar o que estou sentindo. Depois quero ouvir você também.”</p>
+      <button class="caderno-troca" id="troca" type="button">Ver outra frase</button>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao-areia">
+  <div class="miolo">
+    <h2 class="texto">Você sabe o que sente. O difícil é achar como dizer.</h2>
+    <p class="texto">Quando estamos magoados, é fácil misturar o que aconteceu com o significado que damos ao acontecimento. A conversa começa com uma queixa e termina numa disputa sobre quem está certo. Talvez soe familiar:</p>
+    <ul class="reconhece">
+      <li>Você quer explicar uma mágoa, mas o outro entende como ataque e se defende.</li>
+      <li>Um assunto fica guardado por semanas porque você não sabe como abri-lo.</li>
+      <li>Você escuta já preparando a resposta, e a outra pessoa percebe.</li>
+      <li>Vocês discordam sobre uma decisão e nenhum dos dois consegue dizer o que realmente importa.</li>
+    </ul>
+    <p class="texto" style="margin-top:28px">O Diálogo a Dois não promete mudar o outro. Ele ajuda você a cuidar da parte que depende de você: como organiza o que sente, como pede e como escuta.</p>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="miolo amostra">
+    <div>
+      <h2>Um trecho do caderno</h2>
+      <p class="texto">O primeiro exercício separa o que aconteceu do significado que damos a isso. Parece pequeno, mas muda o que sai da sua boca.</p>
+      <p class="texto">A interpretação pode ou não refletir a intenção da outra pessoa. Você pode falar do impacto que sentiu sem afirmar que sabe o que ela pensou.</p>
+    </div>
+    <div class="exemplo">
+      <dl>
+        <div class="linha"><dt>O que aconteceu</dt><dd>Enquanto eu contava algo importante, meu parceiro olhou para o celular.</dd></div>
+        <div class="linha"><dt>A interpretação automática</dt><dd>“Ele não se importa comigo.”</dd></div>
+        <div class="linha"><dt>O que senti</dt><dd>Tristeza e frustração.</dd></div>
+        <div class="linha"><dt>O que é importante para mim</dt><dd>Ter momentos de atenção compartilhada.</dd></div>
+        <div class="linha pedido"><dt>Pedido possível</dt><dd>“Podemos guardar os celulares por dez minutos e conversar?”</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao-areia" id="conteudo">
+  <div class="miolo">
+    <h2 class="texto">O que tem dentro</h2>
+    <p class="texto">Cinco módulos para usar na ordem ou separadamente, mais três bônus. Você escolhe um exercício por vez e avança no seu ritmo.</p>
+    <ol class="indice">
+      <li>
+        <span class="mod">Módulo 1</span>
+        <span class="tit">Antes de conversar: entenda o que está acontecendo</span>
+        <p class="desc">Separe fatos, interpretações, sentimentos e pedidos. Identifique o que está sob seu controle e o que não está.</p>
+      </li>
+      <li>
+        <span class="mod">Módulo 2</span>
+        <span class="tit">Encontre as palavras: expresse sem atacar</span>
+        <p class="desc">Transforme frases como “você nunca me escuta” em pedidos claros, sem esconder a mágoa.</p>
+      </li>
+      <li>
+        <span class="mod">Módulo 3</span>
+        <span class="tit">Roteiros para conversas difíceis</span>
+        <p class="desc">Quatro roteiros para falar de algo que magoou, pedir atenção, lidar com uma decisão em que discordam e estabelecer um limite. Inclui frases para pedir uma pausa quando a conversa esquenta.</p>
+      </li>
+      <li>
+        <span class="mod">Módulo 4</span>
+        <span class="tit">Escutar para compreender e buscar acordos</span>
+        <p class="desc">Escuta em três passos (ouvir, resumir, confirmar) e um modelo para sair de “quem está certo?” e chegar a “qual problema precisamos resolver?”.</p>
+      </li>
+      <li>
+        <span class="mod">Módulo 5</span>
+        <span class="tit">Depois do desentendimento</span>
+        <p class="desc">Revisão sem culpabilização e um modelo para pedir desculpas com responsabilidade, sem exigir perdão imediato.</p>
+      </li>
+      <li>
+        <span class="mod">Prática</span>
+        <span class="tit">Plano de 7 dias</span>
+        <p class="desc">Uma pequena prática por dia para transformar a intenção em hábito, no seu ritmo.</p>
+      </li>
+    </ol>
+
+    <div class="bonus-bloco">
+      <h3>Três bônus no mesmo PDF</h3>
+      <ul>
+        <li><strong>25 frases para conversas delicadas</strong>, para começar, discordar, pedir pausa, pedir desculpas e encerrar com respeito.</li>
+        <li><strong>30 perguntas para conversar a dois</strong>, para escolher algumas por vez, sem usá-las como arma depois.</li>
+        <li><strong>Guia para retomar uma conversa interrompida</strong>, com foco, próximo passo e sem pressão.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="miolo limites">
+    <div>
+      <h2>Para quem é</h2>
+      <ul>
+        <li>Para quem quer organizar o que sente antes de uma conversa importante.</li>
+        <li>Para quem sente que as discussões giram em círculos e quer experimentar outra forma de começar.</li>
+        <li>Para casais que querem praticar juntos, e também para quem prefere começar sozinho.</li>
+      </ul>
+      <p>Os exemplos falam de relacionamentos amorosos, mas as ideias de pedido claro, escuta e pausa podem ser adaptadas a outras relações.</p>
+    </div>
+    <div>
+      <h2>O que o caderno não é</h2>
+      <ul>
+        <li>Não é terapia, diagnóstico nem aconselhamento individual.</li>
+        <li>Não garante que o outro concorde, mude ou responda como você espera.</li>
+        <li>Não serve para pressionar alguém a conversar, perdoar ou ficar.</li>
+      </ul>
+      <p class="seguranca">Se há violência, ameaça, coerção, perseguição ou medo de represálias, priorize sua segurança: conversas a dois podem não ser apropriadas. Em perigo imediato no Brasil, ligue 190. Mulheres em situação de violência podem ligar para o 180.</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao preco" id="comprar">
+  <div class="miolo preco-grade">
+    <div>
+      <h2>Comece com um exercício hoje</h2>
+      <p class="valor"><small>R$</small>19,90</p>
+      <p class="nota">Pagamento único, processado pela Kiwify.</p>
+    </div>
+    <div>
+      <ul>
+        <li>PDF de 16 páginas com 5 módulos e exercícios preenchíveis à mão ou no celular</li>
+        <li>25 frases, 30 perguntas e guia para retomar conversas</li>
+        <li>Plano de prática de 7 dias</li>
+        <li>Acesso por e-mail logo após a confirmação do pagamento</li>
+      </ul>
+      <p style="margin-top:24px"><a class="botao botao-claro" id="cta-preco" href="https://pay.kiwify.com.br/EnoPS7s" rel="noopener">Comprar o Diálogo a Dois</a></p>
+      <p class="nota">Você tem 7 dias para pedir reembolso, conforme o direito de arrependimento em compras online.</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="miolo">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <details>
+        <summary>Isso substitui terapia?</summary>
+        <p>Não. É um material educativo de reflexão e prática de comunicação. Se os conflitos forem recorrentes, causarem sofrimento significativo ou parecerem impossíveis de manejar, procure um profissional qualificado.</p>
+      </details>
+      <details>
+        <summary>E se meu parceiro não quiser participar?</summary>
+        <p>Você pode começar sozinho. Os exercícios dos módulos 1 e 2 são individuais e ajudam a organizar o que você quer dizer. O que acontece depois depende também do outro, e o caderno não promete uma reação específica.</p>
+      </details>
+      <details>
+        <summary>Preciso imprimir?</summary>
+        <p>Não. Você pode ler e anotar no celular ou imprimir e escrever à mão, como preferir.</p>
+      </details>
+      <details>
+        <summary>Como recebo o material?</summary>
+        <p>Depois da confirmação do pagamento, a Kiwify envia o acesso ao PDF para o e-mail usado na compra. Se não encontrar, olhe também a caixa de spam.</p>
+      </details>
+      <details>
+        <summary>Posso pedir reembolso?</summary>
+        <p>Sim, dentro de 7 dias após a compra, pela própria Kiwify.</p>
+      </details>
+      <details>
+        <summary>Quanto tempo leva para fazer os exercícios?</summary>
+        <p>Cada exercício pode ser feito em poucos minutos. Você não precisa usar tudo de uma vez: escolha um tema, adapte as frases às suas palavras e avance no ritmo que for confortável.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="miolo">
+    <p><strong>Nexus Global</strong>. Diálogo a Dois é um recurso educativo de reflexão e prática de comunicação. Não é psicoterapia, avaliação clínica, diagnóstico nem aconselhamento individual. Os resultados variam conforme as pessoas, as circunstâncias e a disposição de cada um.</p>
+  </div>
+</footer>
+
+<div class="barra" id="barra" aria-hidden="true">
+  <span>R$ 19,90</span>
+  <a class="botao" href="https://pay.kiwify.com.br/EnoPS7s" rel="noopener" tabindex="-1">Comprar</a>
+</div>
+
+<script>
+(function(){
+  var pares=[
+    ["“Você nunca me escuta!”","“Quero terminar de explicar o que estou sentindo. Depois quero ouvir você também.”"],
+    ["“Você não se importa comigo.”","“Tenho sentido falta de momentos em que possamos estar juntos com atenção.”"],
+    ["“Você sempre faz isso.”","“Quero conversar sobre o que aconteceu hoje e como podemos lidar com isso.”"],
+    ["“Você tem que mudar.”","“Existe algo que eu gostaria que tentássemos fazer de outra maneira.”"],
+    ["“Você não entende nada.”","“Acho que ainda não expliquei bem o que quero dizer. Posso tentar de outra forma?”"]
+  ];
+  var i=0;
+  var antes=document.getElementById('antes');
+  var depois=document.getElementById('depois');
+  var botao=document.getElementById('troca');
+  botao.addEventListener('click',function(){
+    i=(i+1)%pares.length;
+    antes.classList.add('some');depois.classList.add('some');
+    setTimeout(function(){
+      antes.textContent=pares[i][0];
+      depois.textContent=pares[i][1];
+      antes.classList.remove('some');depois.classList.remove('some');
+    },200);
+  });
+
+  /* barra fixa no celular: aparece depois do primeiro botão e some na seção de preço */
+  var barra=document.getElementById('barra');
+  var heroVisivel=true,precoVisivel=false;
+  function atualiza(){
+    var mostra=!heroVisivel&&!precoVisivel;
+    barra.classList.toggle('visivel',mostra);
+    barra.setAttribute('aria-hidden',mostra?'false':'true');
+    var link=barra.querySelector('a');
+    link.tabIndex=mostra?0:-1;
+  }
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){heroVisivel=e[0].isIntersecting;atualiza();}).observe(document.getElementById('cta-hero'));
+    new IntersectionObserver(function(e){precoVisivel=e[0].isIntersecting;atualiza();}).observe(document.getElementById('comprar'));
+  }
+})();
+</script>
+</body>
+</html>
