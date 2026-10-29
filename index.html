@@ -186,6 +186,25 @@ p{margin:0 0 1em}
   *{transition:none !important}
 }
 </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1024610913977181');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Diálogo a Dois', value: 19.90, currency: 'BRL'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1024610913977181&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -425,6 +444,13 @@ p{margin:0 0 1em}
     new IntersectionObserver(function(e){heroVisivel=e[0].isIntersecting;atualiza();}).observe(document.getElementById('cta-hero'));
     new IntersectionObserver(function(e){precoVisivel=e[0].isIntersecting;atualiza();}).observe(document.getElementById('comprar'));
   }
+
+  /* pixel: marca o clique em qualquer botão que leva ao checkout */
+  document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(window.fbq){fbq('track','InitiateCheckout',{content_name:'Diálogo a Dois',value:19.90,currency:'BRL'});}
+    });
+  });
 })();
 </script>
 </body>
